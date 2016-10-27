@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     func updateTime() {
-        let date = Date()
         let calendar = NSCalendar.current
         let retCal: NSCalendar.Unit = [
             NSCalendar.Unit.hour,
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
             NSCalendar.Unit.second
         ]
         
-        let retTime = (calendar as NSCalendar).components(retCal, from: date)
+        let retTime = (calendar as NSCalendar).components(retCal, from: Date())
         var hour = retTime.hour
         let minute = retTime.minute
         let second = retTime.second
@@ -35,9 +34,9 @@ class ViewController: UIViewController {
         } else {
             ampmLabel.text = "AM"
         }
-        timeLabel.text = convertZero(hour!) + ":" + convertZero(minute!) + ":" + convertZero(second!)
+        timeLabel.text = convertTime(hour!) + ":" + convertTime(minute!) + ":" + convertTime(second!)
     }
-    func convertZero(_ num: Int) -> String {
+    func convertTime(_ num: Int) -> String {
         let tmpStr = (num < 10 ? "0":"") + String(num)
         return tmpStr
     }
