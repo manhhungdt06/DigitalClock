@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Let's go Digital Regular.ttf">
+            <string>LetsgoDigital-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digital_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanar.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OeQ-5d-YmK"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:50:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmA-31-nZ3">
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="65"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5B-c6-FNI">
+                                <frame key="frameInset" minX="299" minY="88" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OeQ-5d-YmK" secondAttribute="bottom" id="3H3-Tk-EdI"/>
+                            <constraint firstAttribute="trailing" secondItem="OeQ-5d-YmK" secondAttribute="trailing" id="4iX-A6-lGJ"/>
+                            <constraint firstItem="OeQ-5d-YmK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LtH-eN-kLJ"/>
+                            <constraint firstItem="JmA-31-nZ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T82-08-nMI"/>
+                            <constraint firstItem="JmA-31-nZ3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="105" id="bYI-wS-qVD"/>
+                            <constraint firstItem="OeQ-5d-YmK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bcb-qt-BF0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ampmLabel" destination="l5B-c6-FNI" id="QPR-5m-ALK"/>
+                        <outlet property="timeLabel" destination="JmA-31-nZ3" id="LKh-Mn-hdY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="balanar.jpg" width="324" height="576"/>
+    </resources>
+</document>
